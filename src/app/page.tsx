@@ -412,9 +412,9 @@ export default function HomePage() {
               <div
                 className="w-12 h-12 rounded-2xl flex items-center justify-center animate-float card-3d"
                 style={{ 
-                  background: "linear-gradient(135deg, var(--sos-red), #ff7a7a, var(--sos-red-dark))",
-                  boxShadow: "0 14px 44px rgba(239, 68, 68, 0.45), inset 0 1px 0 rgba(255, 255, 255, 0.25)",
+                  backgroundImage: "linear-gradient(135deg, var(--sos-red), #ff7a7a, var(--sos-red-dark))",
                   backgroundSize: "200% 200%",
+                  boxShadow: "0 14px 44px rgba(239, 68, 68, 0.45), inset 0 1px 0 rgba(255, 255, 255, 0.25)",
                   animation: "float-3d 4s ease-in-out infinite, morph-gradient 6s ease-in-out infinite"
                 }}
               >
