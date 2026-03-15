@@ -122,7 +122,7 @@ export default function ProfilePage() {
   const current = editing ? tempProfile : profile;
 
   return (
-    <div className="flex flex-col min-h-screen pb-20" style={{ backgroundColor: "#0F172A" }}>
+    <div className="flex flex-col min-h-screen pb-20" style={{ backgroundColor: "var(--bg-primary)" }}>
       <PageHeader
         title="Medical Profile"
         subtitle="Accessible to responders in emergencies"
@@ -132,11 +132,14 @@ export default function ProfilePage() {
       <div className="px-4 py-4 space-y-4">
         {/* Medical ID Banner */}
         <div
-          className="flex items-center gap-3 p-3 rounded-xl"
-          style={{ backgroundColor: "#DC262615", border: "1px solid #DC262630" }}
+          className="flex items-center gap-3 p-3.5 rounded-xl"
+          style={{ 
+            backgroundColor: "rgba(239, 68, 68, 0.12)", 
+            border: "1px solid rgba(239, 68, 68, 0.25)"
+          }}
         >
-          <Shield size={18} color="#F87171" />
-          <p className="text-xs" style={{ color: "#FCA5A5" }}>
+          <Shield size={18} color="var(--sos-red)" />
+          <p className="text-xs font-medium" style={{ color: "var(--sos-red-light)" }}>
             This information is shared with emergency responders when you activate SOS.
           </p>
         </div>
@@ -144,7 +147,10 @@ export default function ProfilePage() {
         {/* Personal Info */}
         <div
           className="p-4 rounded-2xl"
-          style={{ backgroundColor: "#1E293B", border: "1px solid #334155" }}
+          style={{ 
+            backgroundColor: "var(--bg-card)", 
+            border: "1px solid var(--border-color)"
+          }}
         >
           <div className="flex items-center justify-between mb-4">
             <div className="flex items-center gap-2">
@@ -156,8 +162,12 @@ export default function ProfilePage() {
             {!editing ? (
               <button
                 onClick={() => setEditing(true)}
-                className="flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-semibold"
-                style={{ backgroundColor: "#0F172A", color: "#60A5FA", border: "1px solid #334155" }}
+                className="flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-semibold transition-all hover:scale-105"
+                style={{ 
+                  backgroundColor: "var(--bg-primary)", 
+                  color: "var(--sos-blue)", 
+                  border: "1px solid var(--border-color)"
+                }}
               >
                 <Edit3 size={12} />
                 Edit
@@ -166,16 +176,24 @@ export default function ProfilePage() {
               <div className="flex gap-2">
                 <button
                   onClick={saveProfile}
-                  className="flex items-center gap-1 px-3 py-1.5 rounded-xl text-xs font-semibold"
-                  style={{ backgroundColor: "#15803D20", color: "#4ADE80" }}
+                  className="flex items-center gap-1 px-3 py-1.5 rounded-xl text-xs font-semibold transition-all hover:scale-105"
+                  style={{ 
+                    backgroundColor: "rgba(16, 185, 129, 0.15)", 
+                    color: "var(--sos-green)",
+                    border: "1px solid rgba(16, 185, 129, 0.3)"
+                  }}
                 >
                   <Check size={12} />
                   Save
                 </button>
                 <button
                   onClick={cancelEdit}
-                  className="flex items-center gap-1 px-3 py-1.5 rounded-xl text-xs font-semibold"
-                  style={{ backgroundColor: "#DC262620", color: "#F87171" }}
+                  className="flex items-center gap-1 px-3 py-1.5 rounded-xl text-xs font-semibold transition-all hover:scale-105"
+                  style={{ 
+                    backgroundColor: "rgba(239, 68, 68, 0.15)", 
+                    color: "var(--sos-red)",
+                    border: "1px solid rgba(239, 68, 68, 0.3)"
+                  }}
                 >
                   <X size={12} />
                   Cancel
@@ -263,7 +281,10 @@ export default function ProfilePage() {
         {/* Allergies */}
         <div
           className="p-4 rounded-2xl"
-          style={{ backgroundColor: "#1E293B", border: "1px solid #334155" }}
+          style={{ 
+            backgroundColor: "var(--bg-card)", 
+            border: "1px solid var(--border-color)"
+          }}
         >
           <div className="flex items-center gap-2 mb-3">
             <AlertTriangle size={16} color="#F87171" />
@@ -300,7 +321,10 @@ export default function ProfilePage() {
         {/* Medications */}
         <div
           className="p-4 rounded-2xl"
-          style={{ backgroundColor: "#1E293B", border: "1px solid #334155" }}
+          style={{ 
+            backgroundColor: "var(--bg-card)", 
+            border: "1px solid var(--border-color)"
+          }}
         >
           <div className="flex items-center gap-2 mb-3">
             <Pill size={16} color="#A78BFA" />
@@ -338,7 +362,10 @@ export default function ProfilePage() {
         {/* Medical Conditions */}
         <div
           className="p-4 rounded-2xl"
-          style={{ backgroundColor: "#1E293B", border: "1px solid #334155" }}
+          style={{ 
+            backgroundColor: "var(--bg-card)", 
+            border: "1px solid var(--border-color)"
+          }}
         >
           <div className="flex items-center gap-2 mb-3">
             <Activity size={16} color="#60A5FA" />
@@ -376,7 +403,10 @@ export default function ProfilePage() {
         {/* Emergency Note */}
         <div
           className="p-4 rounded-2xl"
-          style={{ backgroundColor: "#1E293B", border: "1px solid #334155" }}
+          style={{ 
+            backgroundColor: "var(--bg-card)", 
+            border: "1px solid var(--border-color)"
+          }}
         >
           <div className="flex items-center gap-2 mb-3">
             <Phone size={16} color="#FCD34D" />

@@ -19,10 +19,10 @@ export default function BottomNav() {
     <nav
       className="fixed bottom-0 left-1/2 -translate-x-1/2 w-full max-w-[430px] z-50 safe-bottom glass-strong animate-slide-up card-3d"
       style={{
-        borderTop: "1px solid var(--border-color)",
-        backdropFilter: 'blur(24px) saturate(200%)',
-        background: 'linear-gradient(135deg, rgba(30, 41, 59, 0.8), rgba(30, 41, 59, 0.6))',
-        boxShadow: '0 -16px 64px rgba(0, 0, 0, 0.15), inset 0 1px 0 rgba(255, 255, 255, 0.15)'
+        borderTop: "1px solid rgba(255, 255, 255, 0.08)",
+        backdropFilter: 'blur(26px) saturate(210%)',
+        background: 'linear-gradient(135deg, rgba(20, 27, 44, 0.85), rgba(20, 27, 44, 0.65))',
+        boxShadow: '0 -20px 80px rgba(0, 0, 0, 0.25), inset 0 1px 0 rgba(255, 255, 255, 0.12)'
       }}
     >
       <div className="flex items-center justify-around px-4 py-4">
@@ -35,26 +35,26 @@ export default function BottomNav() {
               className="group flex flex-col items-center gap-2 px-5 py-3 rounded-2xl transition-all duration-500 touch-target relative card-3d"
               style={{
                 color: isActive ? "var(--sos-red)" : "var(--text-muted)",
-                backgroundColor: isActive ? "rgba(220, 38, 38, 0.15)" : "transparent",
-                border: isActive ? "2px solid rgba(220, 38, 38, 0.3)" : "1px solid transparent",
+                backgroundColor: isActive ? "rgba(239, 68, 68, 0.18)" : "transparent",
+                border: isActive ? "1.5px solid rgba(239, 68, 68, 0.35)" : "1px solid transparent",
                 transformStyle: 'preserve-3d',
-                perspective: '1000px'
+                perspective: '1200px'
               }}
               aria-label={label}
               aria-current={isActive ? "page" : undefined}
             >
               {/* Active indicator with glow */}
               {isActive && (
-                <div className="absolute -top-2 left-1/2 -translate-x-1/2 flex flex-col items-center gap-1">
+                <div className="absolute -top-3 left-1/2 -translate-x-1/2 flex flex-col items-center gap-1">
                   <div 
                     className="w-2 h-2 rounded-full animate-pulse"
                     style={{ 
                       backgroundColor: "var(--sos-red)",
-                      boxShadow: '0 0 15px rgba(220, 38, 38, 0.6)'
+                      boxShadow: '0 0 18px rgba(239, 68, 68, 0.7)'
                     }}
                   />
                   <div 
-                    className="w-8 h-0.5 rounded-full opacity-50"
+                    className="w-8 h-0.5 rounded-full opacity-60"
                     style={{ backgroundColor: "var(--sos-red)" }}
                   />
                 </div>

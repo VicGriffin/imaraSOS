@@ -1,36 +1,36 @@
 @import "tailwindcss";
 
 :root {
-  /* Modern Emergency Color Palette */
-  --sos-red: #dc2626;
-  --sos-red-dark: #991b1b;
-  --sos-red-light: #fee2e2;
-  --sos-orange: #ea580c;
+  /* Modern Emergency Color Palette - Enhanced */
+  --sos-red: #ef4444;
+  --sos-red-dark: #dc2626;
+  --sos-red-light: #fecaca;
+  --sos-orange: #f97316;
   --sos-orange-light: #fed7aa;
   --sos-blue: #3b82f6;
-  --sos-blue-light: #dbeafe;
+  --sos-blue-light: #bfdbfe;
   --sos-teal: #14b8a6;
-  --sos-teal-light: #ccfbf1;
+  --sos-teal-light: #99f6e4;
   --sos-green: #10b981;
-  --sos-green-light: #dcfce7;
+  --sos-green-light: #d1fae5;
   --sos-purple: #8b5cf6;
-  --sos-purple-light: #ede9fe;
+  --sos-purple-light: #e9d5ff;
   --sos-pink: #ec4899;
-  --sos-pink-light: #fce7f3;
+  --sos-pink-light: #fbcfe8;
 
-  /* Enhanced Neutral Palette */
-  --bg-primary: #0f172a;
-  --bg-secondary: #1e293b;
-  --bg-tertiary: #334155;
-  --bg-card: #1e293b;
-  --bg-glass: rgba(30, 41, 59, 0.5);
-  --text-primary: #f8fafc;
+  /* Premium Neutral Palette */
+  --bg-primary: #0a0f1f;
+  --bg-secondary: #141b2c;
+  --bg-tertiary: #1f2738;
+  --bg-card: #151d2b;
+  --bg-glass: rgba(20, 27, 44, 0.6);
+  --text-primary: #f1f5f9;
   --text-secondary: #cbd5e1;
-  --text-muted: #64748b;
-  --border-color: #334155;
-  --border-light: #475569;
-  --shadow-glow: rgba(139, 92, 246, 0.15);
-  --shadow-sos: rgba(220, 38, 38, 0.25);
+  --text-muted: #717d92;
+  --border-color: #2a3548;
+  --border-light: #3a4558;
+  --shadow-glow: rgba(139, 92, 246, 0.2);
+  --shadow-sos: rgba(239, 68, 68, 0.3);
 }
 
 * {
@@ -46,14 +46,15 @@ html {
 
 body {
   background: 
-    radial-gradient(ellipse at 20% 30%, rgba(139, 92, 246, 0.15) 0%, transparent 50%),
-    radial-gradient(ellipse at 80% 70%, rgba(59, 130, 246, 0.12) 0%, transparent 50%),
-    radial-gradient(ellipse at 40% 80%, rgba(236, 72, 153, 0.08) 0%, transparent 50%),
-    linear-gradient(135deg, #0F172A 0%, #1E293B 50%, #0F172A 100%);
+    radial-gradient(ellipse at 20% 30%, rgba(139, 92, 246, 0.12) 0%, transparent 50%),
+    radial-gradient(ellipse at 80% 70%, rgba(59, 130, 246, 0.1) 0%, transparent 50%),
+    radial-gradient(ellipse at 40% 80%, rgba(236, 72, 153, 0.06) 0%, transparent 50%),
+    linear-gradient(135deg, #0a0f1f 0%, #141b2c 50%, #0a0f1f 100%);
   color: var(--text-primary);
   font-family:
     -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue",
     Arial, sans-serif;
+  letter-spacing: -0.3px;
   min-height: 100vh;
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
@@ -373,35 +374,35 @@ body::after {
 
 /* Advanced Glassmorphism Utility Classes */
 .glass {
-  background: rgba(30, 41, 59, 0.4);
+  background: rgba(20, 27, 44, 0.5);
   backdrop-filter: blur(20px) saturate(180%);
   -webkit-backdrop-filter: blur(20px) saturate(180%);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.12);
   box-shadow: 
-    0 8px 32px rgba(0, 0, 0, 0.1),
-    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+    0 8px 32px rgba(0, 0, 0, 0.12),
+    inset 0 1px 0 rgba(255, 255, 255, 0.08);
 }
 
 .glass-strong {
-  background: rgba(30, 41, 59, 0.7);
-  backdrop-filter: blur(24px) saturate(200%);
-  -webkit-backdrop-filter: blur(24px) saturate(200%);
+  background: rgba(20, 27, 44, 0.75);
+  backdrop-filter: blur(26px) saturate(210%);
+  -webkit-backdrop-filter: blur(26px) saturate(210%);
   border: 1px solid rgba(255, 255, 255, 0.15);
   box-shadow: 
-    0 16px 64px rgba(0, 0, 0, 0.15),
-    inset 0 1px 0 rgba(255, 255, 255, 0.15);
+    0 16px 72px rgba(0, 0, 0, 0.2),
+    inset 0 1px 0 rgba(255, 255, 255, 0.12);
 }
 
 .glass-morphism {
   background: linear-gradient(135deg, 
-    rgba(255, 255, 255, 0.1) 0%, 
+    rgba(255, 255, 255, 0.12) 0%, 
     rgba(255, 255, 255, 0.05) 100%);
-  backdrop-filter: blur(16px) saturate(150%);
-  -webkit-backdrop-filter: blur(16px) saturate(150%);
-  border: 1px solid rgba(255, 255, 255, 0.18);
+  backdrop-filter: blur(18px) saturate(160%);
+  -webkit-backdrop-filter: blur(18px) saturate(160%);
+  border: 1px solid rgba(255, 255, 255, 0.15);
   box-shadow: 
-    0 4px 24px rgba(0, 0, 0, 0.08),
-    inset 0 1px 0 rgba(255, 255, 255, 0.12);
+    0 4px 28px rgba(0, 0, 0, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
 }
 
 .neumorphic {
@@ -420,20 +421,22 @@ body::after {
 
 /* Modern Card Styles with 3D Effects */
 .card {
-  background: var(--bg-card);
+  background: rgba(21, 29, 43, 0.5);
   border: 1px solid var(--border-color);
-  border-radius: 20px;
-  transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+  border-radius: 24px;
+  transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
   transform-style: preserve-3d;
-  perspective: 1000px;
+  perspective: 1200px;
+  backdrop-filter: blur(12px);
 }
 
 .card:hover {
-  transform: translateY(-8px) rotateX(2deg) rotateY(2deg);
+  transform: translateY(-10px) rotateX(3deg) rotateY(2deg);
   box-shadow: 
-    0 20px 60px rgba(0, 0, 0, 0.4),
-    0 0 40px rgba(139, 92, 246, 0.2);
-  border-color: var(--border-light);
+    0 24px 80px rgba(0, 0, 0, 0.5),
+    0 0 50px rgba(139, 92, 246, 0.25);
+  border-color: rgba(139, 92, 246, 0.4);
+  background: rgba(21, 29, 43, 0.7);
 }
 
 .card-glow {
@@ -462,20 +465,44 @@ body::after {
   background: linear-gradient(135deg, var(--sos-red), var(--sos-red-dark));
   color: white;
   border: none;
-  border-radius: 12px;
-  padding: 12px 24px;
-  font-weight: 600;
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  box-shadow: 0 4px 15px rgba(220, 38, 38, 0.3);
+  border-radius: 14px;
+  padding: 14px 28px;
+  font-weight: 700;
+  font-size: 15px;
+  letter-spacing: -0.2px;
+  transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+  box-shadow: 
+    0 8px 24px rgba(239, 68, 68, 0.35),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2);
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-primary::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+  transition: left 0.6s ease;
+}
+
+.btn-primary:hover::before {
+  left: 100%;
 }
 
 .btn-primary:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(220, 38, 38, 0.4);
+  transform: translateY(-3px);
+  box-shadow: 
+    0 12px 32px rgba(239, 68, 68, 0.45),
+    inset 0 1px 0 rgba(255, 255, 255, 0.3);
 }
 
 .btn-primary:active {
-  transform: translateY(0);
+  transform: translateY(-1px);
+  box-shadow: 0 6px 16px rgba(239, 68, 68, 0.3);
 }
 
 /* Touch targets - minimum 44px for accessibility */

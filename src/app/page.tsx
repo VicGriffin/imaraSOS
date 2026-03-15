@@ -240,14 +240,14 @@ function EmergencyCard({ href, icon, label, sublabel, color, bgColor }: Emergenc
   return (
     <Link
       href={href}
-      className="group flex flex-col items-center justify-center gap-4 p-6 rounded-3xl transition-all duration-500 active:scale-95 touch-target card card-3d"
+      className="group flex flex-col items-center justify-center gap-4 p-7 rounded-3xl transition-all duration-500 active:scale-95 touch-target card card-3d"
       style={{ 
         backgroundColor: bgColor, 
-        border: `2px solid ${color}20`,
+        border: `1.5px solid ${color}28`,
         position: 'relative',
         overflow: 'hidden',
         transformStyle: 'preserve-3d',
-        perspective: '1000px'
+        perspective: '1200px'
       }}
     >
       {/* Advanced hover gradient overlay */}
@@ -279,11 +279,11 @@ function EmergencyCard({ href, icon, label, sublabel, color, bgColor }: Emergenc
         </div>
       </div>
       
-      <div className="text-center relative z-10 space-y-1">
-        <p className="text-lg font-bold leading-tight transition-all duration-300" style={{ color, textShadow: `0 0 15px ${color}40` }}>
+      <div className="text-center relative z-10 space-y-1.5">
+        <p className="text-base font-bold leading-tight transition-all duration-300 tracking-tight" style={{ color, textShadow: `0 0 16px ${color}35` }}>
           {label}
         </p>
-        <p className="text-xs transition-all duration-300" style={{ color: "var(--text-muted)" }}>
+        <p className="text-xs font-medium transition-all duration-300" style={{ color: "var(--text-muted)" }}>
           {sublabel}
         </p>
       </div>
@@ -315,9 +315,10 @@ function QuickAction({ href, icon, label, color }: QuickActionProps) {
       href={href}
       className="group flex items-center gap-5 p-5 rounded-2xl transition-all duration-500 active:scale-95 glass-morphism hover:glass-strong card-3d"
       style={{ 
-        border: `1px solid var(--border-color)`,
+        border: `1px solid rgba(255, 255, 255, 0.08)`,
         transformStyle: 'preserve-3d',
-        perspective: '1000px'
+        perspective: '1200px',
+        background: 'linear-gradient(135deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.04))'
       }}
     >
       <div
@@ -405,14 +406,14 @@ export default function HomePage() {
     <div className="flex flex-col min-h-screen pb-20" style={{ backgroundColor: "var(--bg-primary)" }}>
       {/* Enhanced 3D Header */}
       <header className="glass-strong animate-slide-down card-3d">
-        <div className="flex items-center justify-between px-6 pt-6 pb-4">
+        <div className="flex items-center justify-between px-6 pt-5 pb-5">
           <div className="space-y-1">
             <div className="flex items-center gap-3">
               <div
                 className="w-12 h-12 rounded-2xl flex items-center justify-center animate-float card-3d"
                 style={{ 
-                  background: "linear-gradient(135deg, var(--sos-red), #ff6b6b, var(--sos-red-dark))",
-                  boxShadow: "0 12px 40px rgba(220, 38, 38, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.2)",
+                  background: "linear-gradient(135deg, var(--sos-red), #ff7a7a, var(--sos-red-dark))",
+                  boxShadow: "0 14px 44px rgba(239, 68, 68, 0.45), inset 0 1px 0 rgba(255, 255, 255, 0.25)",
                   backgroundSize: "200% 200%",
                   animation: "float-3d 4s ease-in-out infinite, morph-gradient 6s ease-in-out infinite"
                 }}
@@ -420,10 +421,10 @@ export default function HomePage() {
                 <span className="text-white text-sm font-black animate-neon">SOS</span>
               </div>
               <div>
-                <span className="text-2xl font-black" style={{ color: "var(--text-primary)" }}>
+                <span className="text-2xl font-black tracking-tight" style={{ color: "var(--text-primary)" }}>
                   Imara<span style={{ color: "var(--sos-red)" }}>SOS</span>
                 </span>
-                <p className="text-xs" style={{ color: "var(--text-muted)" }}>
+                <p className="text-xs font-medium" style={{ color: "var(--text-muted)" }}>
                   Emergency Response Platform
                 </p>
               </div>
@@ -457,11 +458,11 @@ export default function HomePage() {
 
       <div className="flex-1 px-6 py-6 space-y-8">
         {/* Enhanced Time & Status with 3D effects */}
-        <div className="text-center space-y-4 animate-fade-in">
+        <div className="text-center space-y-5 animate-fade-in">
           <div className="relative inline-block card-3d">
-            <p className="text-6xl font-black tabular-nums" style={{ 
+            <p className="text-7xl font-black tabular-nums tracking-tight" style={{ 
               color: "var(--text-primary)",
-              textShadow: "0 0 30px rgba(139, 92, 246, 0.3)",
+              textShadow: "0 0 30px rgba(139, 92, 246, 0.4)",
               background: "linear-gradient(135deg, var(--text-primary), var(--text-secondary), var(--text-primary))",
               backgroundSize: "200% 200%",
               backgroundClip: "text",
@@ -472,19 +473,19 @@ export default function HomePage() {
               {time}
             </p>
             <div 
-              className="absolute -inset-4 rounded-2xl opacity-30"
+              className="absolute -inset-4 rounded-2xl opacity-40"
               style={{
                 background: "linear-gradient(45deg, var(--sos-purple), var(--sos-blue), var(--sos-pink))",
-                filter: "blur(30px)",
+                filter: "blur(32px)",
                 animation: "morph-gradient 6s ease-in-out infinite"
               }}
             />
           </div>
-          <div className="flex items-center justify-center gap-3 text-sm" style={{ color: "var(--text-secondary)" }}>
+          <div className="flex items-center justify-center gap-2 text-sm" style={{ color: "var(--text-secondary)" }}>
             <div className="w-3 h-3 rounded-full bg-green-500 animate-pulse" />
-            <span className="font-medium">Location services active</span>
-            <span className="text-xs">•</span>
-            <span className="font-medium">GPS ready</span>
+            <span className="font-semibold">Location services active</span>
+            <span className="text-xs opacity-50">•</span>
+            <span className="font-semibold">GPS ready</span>
           </div>
         </div>
 
